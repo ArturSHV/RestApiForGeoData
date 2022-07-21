@@ -1,0 +1,21 @@
+﻿@model dynamic
+
+
+
+<p>Широта: @ViewBag.lat</p>
+<p>Долгота: @ViewBag.lon</p>
+
+@{
+	int i = 1;
+	foreach(var item in @Model.suggestions)
+	{
+		if (i <= 10)
+		{
+			<p>@i) @item.unrestricted_value</p>
+
+			i++;
+		}
+	}
+}
+
+
